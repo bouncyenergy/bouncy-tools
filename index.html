@@ -143,6 +143,290 @@ section.tool:last-of-type { border-bottom: 0; }
         <ul>
           <li>Optimised platform level and fall</li>
           <li>Cut and fill volumes and mass balance</li>
+          <li>Cut and fill slopes outside the platform, with daylighting to existing ground</li>
+          <li>Maps and a report, with terrain as raster and shapefile</li>
+        </ul>
+      </div>
+    </div>
+    <p class="why"><b>Why it matters:</b> on sloping or rocky plots, earthworks can add real cost and decide whether a site is viable. A first volume estimate lets you compare plots early.</p>
+  </div>
+</section>
+
+<section class="tool" id="layout">
+  <div class="fig">
+    <svg viewBox="0 0 200 130" role="img" aria-label="Schematic of battery units placed in a site boundary">
+      <polygon points="14,20 150,12 186,60 160,118 22,110" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-dasharray="5 4"/>
+      <g fill="var(--accent)" opacity=".9">
+        <rect x="34" y="34" width="26" height="12"/><rect x="66" y="33" width="26" height="12"/><rect x="98" y="32" width="26" height="12"/>
+        <rect x="35" y="54" width="26" height="12"/><rect x="67" y="53" width="26" height="12"/><rect x="99" y="52" width="26" height="12"/>
+        <rect x="36" y="74" width="26" height="12"/><rect x="68" y="73" width="26" height="12"/><rect x="100" y="72" width="26" height="12"/>
+      </g>
+      <rect x="138" y="84" width="24" height="16" fill="var(--ink)"/>
+      <rect x="140" y="38" width="8" height="30" fill="var(--muted)"/>
+    </svg>
+    <p>Units placed inside the site boundary, with the transformer and access kept clear.</p>
+  </div>
+  <div>
+    <p class="tag">BESS layout</p>
+    <h2>Layout</h2>
+    <p class="what">Generates a complete battery site layout inside your plot boundary from the equipment you choose. Try several configurations in minutes instead of redrawing a CAD file for each one.</p>
+    <div class="cols">
+      <div>
+        <h3>You provide</h3>
+        <ul>
+          <li>Site boundary as a polygon</li>
+          <li>Equipment type and size from the product register</li>
+        </ul>
+      </div>
+      <div>
+        <h3>You get</h3>
+        <ul>
+          <li>Layout drawing and unit positions as shapefiles</li>
+          <li>Maps and a short report</li>
+          <li>Layout variants to compare on capacity and area use</li>
+        </ul>
+      </div>
+    </div>
+    <p class="why"><b>Why it matters:</b> early layouts decide how much MW and MWh a plot can hold, and they are the base for grading, noise and visibility.</p>
+  </div>
+</section>
+
+<section class="tool" id="viewshed">
+  <div class="fig">
+    <svg viewBox="0 0 200 130" role="img" aria-label="Schematic of a viewshed from a facility across terrain and forest">
+      <path d="M0 100 Q40 80 80 92 T200 70 L200 130 L0 130Z" fill="var(--line)"/>
+      <g fill="var(--muted)" opacity=".7"><rect x="108" y="62" width="6" height="16"/><rect x="118" y="58" width="6" height="18"/><rect x="128" y="60" width="6" height="16"/><rect x="138" y="56" width="6" height="18"/></g>
+      <path d="M40 90 L190 40 L190 76Z" fill="var(--accent)" opacity=".25"/>
+      <rect x="34" y="82" width="12" height="8" fill="var(--accent)"/>
+      <circle cx="176" cy="62" r="5" fill="var(--ink)"/>
+    </svg>
+    <p>Visibility from the facility across terrain and tree cover.</p>
+  </div>
+  <div>
+    <p class="tag">Visibility analysis</p>
+    <h2>Viewshed</h2>
+    <p class="what">Maps where a battery facility can be seen from, using a surface model that includes forest. Run it for summer and winter to show how leaf cover changes what neighbours and passers-by see.</p>
+    <div class="cols">
+      <div>
+        <h3>You provide</h3>
+        <ul>
+          <li>Facility position and height</li>
+          <li>Terrain and tree height data</li>
+        </ul>
+      </div>
+      <div>
+        <h3>You get</h3>
+        <ul>
+          <li>Visibility for summer and winter</li>
+          <li>Visibility maps and a report ready for permit material and neighbour dialogue</li>
+          <li>Visibility as raster and shapefile</li>
+        </ul>
+      </div>
+    </div>
+    <p class="why"><b>Why it matters:</b> visual impact is a common question from municipalities and neighbours. A clear map answers it early.</p>
+  </div>
+</section>
+
+<section class="tool" id="noise">
+  <div class="fig">
+    <svg viewBox="0 0 200 130" role="img" aria-label="Schematic of sound levels spreading from a facility to a nearby dwelling">
+      <circle cx="60" cy="66" r="14" fill="none" stroke="var(--accent)" stroke-width="2" opacity=".9"/>
+      <circle cx="60" cy="66" r="30" fill="none" stroke="var(--accent)" stroke-width="2" opacity=".6"/>
+      <circle cx="60" cy="66" r="48" fill="none" stroke="var(--accent)" stroke-width="2" opacity=".4"/>
+      <circle cx="60" cy="66" r="68" fill="none" stroke="var(--accent)" stroke-width="2" opacity=".25"/>
+      <rect x="54" y="60" width="12" height="12" fill="var(--accent)"/>
+      <path d="M160 74 L172 62 L184 74 L184 90 L160 90Z" fill="var(--ink)"/>
+    </svg>
+    <p>Sound spreading from the facility towards the nearest dwelling.</p>
+  </div>
+  <div>
+    <p class="tag">Environmental noise</p>
+    <h2>Noise</h2>
+    <p class="what">Calculates sound levels around a battery site using the ISO 9613-2 method, with terrain taken into account. Sources come straight from the layout, so a change in the layout gives a new noise map.</p>
+    <div class="cols">
+      <div>
+        <h3>You provide</h3>
+        <ul>
+          <li>Layout and equipment sound data</li>
+          <li>Locations of dwellings and other receivers</li>
+        </ul>
+      </div>
+      <div>
+        <h3>You get</h3>
+        <ul>
+          <li>Noise contours and levels at each receiver</li>
+          <li>Noise maps and a report</li>
+          <li>Noise levels as raster and shapefile</li>
+          <li>Settings stored with every run</li>
+        </ul>
+      </div>
+    </div>
+    <p class="why"><b>Why it matters:</b> noise is often the limiting factor for where a battery can be built. Knowing early lets you adjust layout or distance before you apply.</p>
+  </div>
+</section>
+
+<aside class="contact" id="contact">
+  <div>
+    <h2>Want these tools applied to your site?</h2>
+    <p>Send a site boundary or a rough location and describe the project. I will tell you which analyses make sense and what you would get back.</p>
+  </div>
+  <div class="who">
+    <b>Olle Nyström</b><br>
+    Bouncy Energy Development AB<br>
+    <a href="mailto:olle@bouncyenergy.com">olle@bouncyenergy.com</a><br>
+    +46 708 23 02 50
+  </div>
+</aside>
+
+<p class="foot">Tool descriptions are summaries. Scope and deliverables are agreed per project.</p>
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bouncy Site Analysis Tools</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: calm editorial column, one row per tool with a schematic on the left, a pipeline strip showing how the tools chain. */
+:root {
+  --ink: #14202b;
+  --muted: #526171;
+  --paper: #f6f7f4;
+  --card: #ffffff;
+  --line: #d9ddd6;
+  --accent: #e4572e;
+  --accent-ink: #ffffff;
+  --display: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --body: "Inter", "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ink: #eef1ec; --muted: #9fadba; --paper: #0f1923; --card: #16232f; --line: #2a3a49;
+    --accent: #ff7a50; --accent-ink: #14202b; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --ink: #eef1ec; --muted: #9fadba; --paper: #0f1923; --card: #16232f; --line: #2a3a49;
+  --accent: #ff7a50; --accent-ink: #14202b; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 17px/1.6 var(--body); }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+h1, h2, h3 { font-family: var(--display); line-height: 1.15; text-wrap: balance; margin: 0; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+header.hero { padding: 64px 0 40px; border-bottom: 1px solid var(--line); }
+.kicker { font: 600 13px/1 var(--body); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin: 0 0 16px; }
+h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; max-width: 18ch; }
+.lead { max-width: 62ch; color: var(--muted); font-size: 1.1rem; margin: 20px 0 0; }
+.hero-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.btn { display: inline-block; padding: 12px 20px; border-radius: 8px; font: 600 15px/1.2 var(--body); text-decoration: none; border: 1px solid var(--ink); color: var(--ink); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.btn:hover { filter: brightness(1.06); }
+
+.pipeline { padding: 36px 0 8px; }
+.pipeline h2 { font-size: 1.15rem; font-weight: 600; margin-bottom: 14px; }
+.chain { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.chain li { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; position: relative; }
+.chain li b { display: block; font: 600 1rem/1.2 var(--display); }
+.chain li span { display: block; color: var(--muted); font-size: .88rem; margin-top: 4px; line-height: 1.4; }
+.chain li:not(:last-child)::after { content: "\2192"; position: absolute; right: -11px; top: 50%; transform: translateY(-50%); color: var(--accent); font-weight: 700; background: var(--paper); line-height: 1; padding: 2px 0; z-index: 1; }
+.chain-note { color: var(--muted); font-size: .9rem; margin: 12px 0 0; }
+
+section.tool { display: grid; grid-template-columns: 220px 1fr; gap: 32px; padding: 44px 0; border-bottom: 1px solid var(--line); }
+section.tool:last-of-type { border-bottom: 0; }
+.fig { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; align-self: start; }
+.fig svg { width: 100%; height: auto; display: block; }
+.fig p { margin: 8px 2px 0; font-size: .78rem; color: var(--muted); line-height: 1.4; }
+.tool h2 { font-size: 1.7rem; font-weight: 700; }
+.tag { color: var(--accent); font: 600 .85rem/1 var(--body); letter-spacing: .04em; margin: 0 0 10px; }
+.tool .what { color: var(--muted); max-width: 62ch; margin: 12px 0 0; }
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 22px; }
+.cols h3 { font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 8px; font-family: var(--body); }
+.cols ul { margin: 0; padding-left: 1.1em; }
+.cols li { margin: 0 0 6px; }
+.cols li::marker { color: var(--accent); }
+.why { margin-top: 20px; padding: 14px 16px; border-left: 3px solid var(--accent); background: var(--card); border-radius: 0 8px 8px 0; font-size: .97rem; }
+
+.contact { margin: 20px 0 64px; background: var(--ink); color: var(--paper); border-radius: 14px; padding: 36px 32px; display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: center; }
+.contact h2 { font-size: 1.6rem; max-width: 22ch; }
+.contact p { margin: 10px 0 0; max-width: 52ch; opacity: .85; }
+.contact .who { font-size: .98rem; line-height: 1.7; }
+.contact a { color: inherit; font-weight: 600; }
+.foot { padding: 0 0 40px; color: var(--muted); font-size: .85rem; }
+
+@media (max-width: 760px) {
+  .chain { grid-template-columns: 1fr 1fr; }
+  .chain li:nth-child(2)::after { display: none; }
+  section.tool { grid-template-columns: 1fr; gap: 20px; padding: 36px 0; }
+  .fig { max-width: 320px; }
+  .cols { grid-template-columns: 1fr; gap: 16px; }
+  .contact { padding: 28px 22px; }
+}
+@media (max-width: 440px) { .chain { grid-template-columns: 1fr; } .chain li::after { display: none; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <p class="kicker">Bouncy Energy Development</p>
+  <h1>Site analysis tools for BESS development</h1>
+  <p class="lead">Four in-house tools that take a battery site from a plot of land to a documented layout, a grading plan, a noise assessment and a visibility study. They run on shared site data, so the answers stay consistent from early screening to permit material.</p>
+  <div class="hero-links">
+    <a class="btn primary" href="#contact">Discuss your site</a>
+    <a class="btn" href="#grading">See the tools</a>
+  </div>
+</header>
+
+<div class="pipeline">
+  <h2>How the tools fit together</h2>
+  <ol class="chain">
+    <li><b>Site Grading</b><span>Shape the terrain and balance cut and fill</span></li>
+    <li><b>Layout</b><span>Place containers, PCS and transformers on the platform</span></li>
+    <li><b>Viewshed</b><span>Show where the facility can be seen</span></li>
+    <li><b>Noise</b><span>Calculate sound levels from the placed sources</span></li>
+  </ol>
+  <p class="chain-note">Each tool also works on its own. Every analysis is delivered as maps and a report, with the underlying data as shapefiles and rasters you can reuse in your own projects.</p>
+</div>
+
+<section class="tool" id="grading">
+  <div class="fig">
+    <svg viewBox="0 0 200 130" role="img" aria-label="Cross section of a sloping terrain with a levelled platform showing cut and fill">
+      <path d="M0 40 L200 100 L200 130 L0 130Z" fill="var(--line)"/>
+      <path d="M58 54 L58 68 L124 68 L124 86Z" fill="var(--accent)" opacity=".35"/>
+      <path d="M58 54 L74 59 L74 68 L58 68Z" fill="var(--accent)" opacity=".85"/>
+      <path d="M0 40 L58 57 L58 68 L124 68 L145 88 L200 100" fill="none" stroke="var(--ink)" stroke-width="2"/>
+      <text x="66" y="48" font-size="9" fill="var(--muted)" font-family="Inter, sans-serif">cut</text>
+      <text x="112" y="100" font-size="9" fill="var(--muted)" font-family="Inter, sans-serif">fill</text>
+    </svg>
+    <p>Levelled platform in sloping terrain, with cut and fill volumes.</p>
+  </div>
+  <div>
+    <p class="tag">Terrain and earthworks</p>
+    <h2>Site Grading</h2>
+    <p class="what">Finds the platform level and slope that fits your plot and balances cut against fill, so less soil leaves or enters the site. Elevation data is fetched automatically from the national elevation model.</p>
+    <div class="cols">
+      <div>
+        <h3>You provide</h3>
+        <ul>
+          <li>Platform area as a polygon</li>
+          <li>Design constraints such as maximum slope</li>
+        </ul>
+      </div>
+      <div>
+        <h3>You get</h3>
+        <ul>
+          <li>Optimised platform level and fall</li>
+          <li>Cut and fill volumes and mass balance</li>
           <li>Slopes outside the platform</li>
           <li>Maps and a report, with terrain as raster and shapefile</li>
         </ul>
