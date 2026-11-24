@@ -15,7 +15,7 @@
   --paper: #f6f7f4;
   --card: #ffffff;
   --line: #d9ddd6;
-  --accent: #e4572e;
+  --accent: #d3165a;
   --accent-ink: #ffffff;
   --display: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
   --body: "Inter", "Helvetica Neue", Arial, sans-serif;
@@ -24,12 +24,12 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --ink: #eef1ec; --muted: #9fadba; --paper: #0f1923; --card: #16232f; --line: #2a3a49;
-    --accent: #ff7a50; --accent-ink: #14202b; color-scheme: dark;
+    --accent: #ff5c93; --accent-ink: #1a0a10; color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --ink: #eef1ec; --muted: #9fadba; --paper: #0f1923; --card: #16232f; --line: #2a3a49;
-  --accent: #ff7a50; --accent-ink: #14202b; color-scheme: dark;
+  --accent: #ff5c93; --accent-ink: #1a0a10; color-scheme: dark;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -39,6 +39,8 @@ h1, h2, h3 { font-family: var(--display); line-height: 1.15; text-wrap: balance;
 a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 
 header.hero { padding: 64px 0 40px; border-bottom: 1px solid var(--line); }
+.logo { display:inline-block; margin: 0 0 28px; } .logo img { display:block; height: 64px; width:auto; }
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .logo img{ filter:brightness(1.35);} }
 .kicker { font: 600 13px/1 var(--body); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin: 0 0 16px; }
 h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; max-width: 18ch; }
 .lead { max-width: 62ch; color: var(--muted); font-size: 1.1rem; margin: 20px 0 0; }
@@ -78,6 +80,18 @@ section.tool:last-of-type { border-bottom: 0; }
 .contact a { color: inherit; font-weight: 600; }
 .foot { padding: 0 0 40px; color: var(--muted); font-size: .85rem; }
 
+.site-foot { background: #14202b; color: #eef1ec; padding: 48px 0 28px; }
+.site-foot .fcols { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 32px; }
+.site-foot img { display: block; height: 56px; width: auto; }
+.site-foot .ftag { margin: 12px 0 0; opacity: .8; font-size: .95rem; }
+.site-foot h3 { font: 600 .75rem/1 var(--body); letter-spacing: .1em; text-transform: uppercase; color: #9fadba; margin: 0 0 14px; }
+.site-foot ul { list-style: none; margin: 0; padding: 0; }
+.site-foot li { margin: 0 0 8px; }
+.site-foot a { color: #eef1ec; text-decoration: none; font-size: .95rem; }
+.site-foot a:hover { color: #ff5c93; }
+.site-foot .fnote { margin: 32px 0 0; font-size: .82rem; color: #9fadba; }
+.site-foot .legal { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; margin-top: 16px; padding-top: 18px; border-top: 1px solid rgba(238,241,236,.15); font-size: .82rem; color: #9fadba; }
+@media (max-width: 760px) { .site-foot .fcols { grid-template-columns: 1fr; gap: 24px; } }
 @media (max-width: 760px) {
   .chain { grid-template-columns: 1fr 1fr; }
   .chain li:nth-child(2)::after { display: none; }
@@ -94,7 +108,7 @@ section.tool:last-of-type { border-bottom: 0; }
 <div class="wrap">
 
 <header class="hero">
-  <p class="kicker">Bouncy Energy Development</p>
+  <a class="logo" href="https://bouncyenergy.com/" aria-label="Bouncy Energy Development – back to bouncyenergy.com"><img src="https://bouncyenergy.com/media/2026/11/bouncy-logo-cerise.png" alt="Bouncy Energy Development" width="1200" height="477"></a>
   <h1>Site analysis tools for BESS development</h1>
   <p class="lead">Four in-house tools that take a battery site from a plot of land to a documented layout, a grading plan, a noise assessment and a visibility study. They run on shared site data, so the answers stay consistent from early screening to permit material.</p>
   <div class="hero-links">
@@ -274,7 +288,17 @@ section.tool:last-of-type { border-bottom: 0; }
   </div>
 </aside>
 
-<p class="foot">Tool descriptions are summaries. Scope and deliverables are agreed per project.</p>
 </div>
+<footer class="site-foot">
+<div class="wrap">
+<div class="fcols">
+<div><a href="https://bouncyenergy.com/" aria-label="Bouncy Energy Development – bouncyenergy.com"><img src="https://bouncyenergy.com/media/2026/11/bouncy-logo-cerise.png" alt="Bouncy Energy Development" width="1200" height="477"></a><p class="ftag">Bounce Forward</p></div>
+<div><h3>Tools</h3><ul><li><a href="#grading">Site Grading</a></li><li><a href="#layout">Layout</a></li><li><a href="#noise">Noise</a></li><li><a href="#viewshed">Viewshed</a></li></ul></div>
+<div><h3>Contact</h3><ul><li><a href="mailto:olle@bouncyenergy.com">olle@bouncyenergy.com</a></li><li><a href="tel:+46708230250">+46 70 823 02 50</a></li><li><a href="https://www.linkedin.com/in/ollenystrom/">LinkedIn</a></li><li><a href="https://bouncyenergy.com/">bouncyenergy.com</a></li></ul></div>
+</div>
+<p class="fnote">Tool descriptions are summaries. Scope and deliverables are agreed per project.</p>
+<div class="legal"><span>© 2026 Bouncy Energy Development AB. Org.nr 559604-4379.</span><span>Halmstad, Sweden</span></div>
+</div>
+</footer>
 </body>
 </html>
