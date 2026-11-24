@@ -107,8 +107,8 @@ section.tool:last-of-type { border-bottom: 0; }
   <ol class="chain">
     <li><b>Site Grading</b><span>Shape the terrain and balance cut and fill</span></li>
     <li><b>Layout</b><span>Place containers, PCS and transformers on the platform</span></li>
-    <li><b>Viewshed</b><span>Show where the facility can be seen</span></li>
     <li><b>Noise</b><span>Calculate sound levels from the placed sources</span></li>
+    <li><b>Viewshed</b><span>Show where the facility can be seen</span></li>
   </ol>
   <p class="chain-note">Each tool also works on its own. Every analysis is delivered as maps and a report, with the underlying data as shapefiles and rasters you can reuse in your own projects.</p>
 </div>
@@ -189,41 +189,6 @@ section.tool:last-of-type { border-bottom: 0; }
   </div>
 </section>
 
-<section class="tool" id="viewshed">
-  <div class="fig">
-    <svg viewBox="0 0 200 130" role="img" aria-label="Schematic of a viewshed from a facility across terrain and forest">
-      <path d="M0 100 Q40 80 80 92 T200 70 L200 130 L0 130Z" fill="var(--line)"/>
-      <g fill="var(--muted)" opacity=".7"><rect x="108" y="62" width="6" height="16"/><rect x="118" y="58" width="6" height="18"/><rect x="128" y="60" width="6" height="16"/><rect x="138" y="56" width="6" height="18"/></g>
-      <path d="M40 90 L190 40 L190 76Z" fill="var(--accent)" opacity=".25"/>
-      <rect x="34" y="82" width="12" height="8" fill="var(--accent)"/>
-      <circle cx="176" cy="62" r="5" fill="var(--ink)"/>
-    </svg>
-    <p>Visibility from the facility across terrain and tree cover.</p>
-  </div>
-  <div>
-    <p class="tag">Visibility analysis</p>
-    <h2>Viewshed</h2>
-    <p class="what">Maps where a battery facility can be seen from, using a surface model that includes forest. Run it for summer and winter to show how leaf cover changes what neighbours and passers-by see.</p>
-    <div class="cols">
-      <div>
-        <h3>You provide</h3>
-        <ul>
-          <li>Facility position and height</li>
-        </ul>
-      </div>
-      <div>
-        <h3>You get</h3>
-        <ul>
-          <li>Visibility for summer and winter</li>
-          <li>Visibility maps and a report ready for permit material and neighbour dialogue</li>
-          <li>Visibility as raster and shapefile</li>
-        </ul>
-      </div>
-    </div>
-    <p class="why"><b>Why it matters:</b> visual impact is a common question from authorities and neighbours. A clear map answers it early.</p>
-  </div>
-</section>
-
 <section class="tool" id="noise">
   <div class="fig">
     <svg viewBox="0 0 200 130" role="img" aria-label="Schematic of sound levels spreading from a facility to a nearby dwelling">
@@ -258,6 +223,41 @@ section.tool:last-of-type { border-bottom: 0; }
       </div>
     </div>
     <p class="why"><b>Why it matters:</b> noise is often the limiting factor for where a battery can be built. Knowing early helps you separate good projects from bad ones.</p>
+  </div>
+</section>
+
+<section class="tool" id="viewshed">
+  <div class="fig">
+    <svg viewBox="0 0 200 130" role="img" aria-label="Schematic of a viewshed from a facility across terrain and forest">
+      <path d="M0 100 Q40 80 80 92 T200 70 L200 130 L0 130Z" fill="var(--line)"/>
+      <g fill="var(--muted)" opacity=".7"><rect x="108" y="62" width="6" height="16"/><rect x="118" y="58" width="6" height="18"/><rect x="128" y="60" width="6" height="16"/><rect x="138" y="56" width="6" height="18"/></g>
+      <path d="M40 90 L190 40 L190 76Z" fill="var(--accent)" opacity=".25"/>
+      <rect x="34" y="82" width="12" height="8" fill="var(--accent)"/>
+      <circle cx="176" cy="62" r="5" fill="var(--ink)"/>
+    </svg>
+    <p>Visibility from the facility across terrain and tree cover.</p>
+  </div>
+  <div>
+    <p class="tag">Visibility analysis</p>
+    <h2>Viewshed</h2>
+    <p class="what">Maps where a battery facility can be seen from, using a surface model that includes forest. Run it for summer and winter to show how leaf cover changes what neighbours and passers-by see.</p>
+    <div class="cols">
+      <div>
+        <h3>You provide</h3>
+        <ul>
+          <li>Facility position and height</li>
+        </ul>
+      </div>
+      <div>
+        <h3>You get</h3>
+        <ul>
+          <li>Visibility for summer and winter</li>
+          <li>Visibility maps and a report ready for permit material and neighbour dialogue</li>
+          <li>Visibility as raster and shapefile</li>
+        </ul>
+      </div>
+    </div>
+    <p class="why"><b>Why it matters:</b> visual impact is a common question from authorities and neighbours. A clear map answers it early.</p>
   </div>
 </section>
 
